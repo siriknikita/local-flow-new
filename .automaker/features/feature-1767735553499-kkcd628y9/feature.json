@@ -1,0 +1,31 @@
+{
+  "category": "Uncategorized",
+  "description": "Add Local Whisper Turbo Model for Transcription\n\nReplace external transcription APIs (e.g., OpenAI) with a local Whisper Turbo model to handle audio transcription without API costs.\n\nTechnical Implementation:\n- Model: Integrate Whisper Turbo (faster variant of OpenAI Whisper) running locally\n- Integration: Python service using `whisper` or `faster-whisper`; expose via HTTP API or Node.js bindings (e.g., `whisper-node` or `@xenova/transformers`)\n- Audio Processing: Accept common formats (mp3, wav, m4a, webm); convert to 16kHz mono WAV if needed using `ffmpeg` or `fluent-ffmpeg`\n- API Endpoint: Modify existing transcription route to call local service instead of external API\n- Service Architecture: Standalone Python service on a separate port or Node.js subprocess; handle model loading and caching\n- Model Management: Download and cache Whisper Turbo model files (~500MB-1GB) on first use; store in project data directory\n\nComponents:\n- TranscriptionService: Refactor to support local and external providers with provider pattern\n- WhisperService: Python service wrapper or Node.js integration handling model inference\n- AudioPreprocessor: Format conversion and normalization utilities\n- ModelManager: Handle model download, versioning, and cache management\n\nPerformance:\n- Model loading: Lazy load on first request; keep in memory for subsequent requests\n- Processing: Use GPU acceleration if available (CUDA/Metal); fallback to CPU\n- Concurrency: Queue system for multiple transcription requests; limit concurrent processing based on hardware\n- Caching: Cache transcription results by audio file hash to avoid reprocessing\n\nError Handling:\n- Model download failures with retry logic\n- Audio format validation and conversion errors\n- Timeout handling for long audio files\n- Graceful degradation if model unavailable (fallback to external API or error response)\n\nConfiguration:\n- Environment variables: `WHISPER_MODEL_PATH`, `WHISPER_DEVICE` (cpu/cuda/metal), `WHISPER_SERVICE_PORT`\n- Settings: Toggle between local and external transcription in project settings\n- Model selection: Support different Whisper variants (tiny, base, small, medium, large-turbo)\n\nDependencies:\n- Python runtime (3.8+) with whisper/faster-whisper\n- FFmpeg for audio processing\n- Node.js: `child_process` or HTTP client for Python service communication\n- Optional: CUDA toolkit for GPU acceleration\n\nSecurity:\n- Validate audio file size limits to prevent resource exhaustion\n- Sanitize file paths and prevent directory traversal\n- Rate limiting on transcription endpoint to prevent abuse",
+  "title": "",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": false,
+  "model": "cursor-auto",
+  "thinkingLevel": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "lite",
+  "requirePlanApproval": true,
+  "dependencies": [],
+  "titleGenerating": false,
+  "status": "verified",
+  "id": "feature-1767735553499-kkcd628y9",
+  "startedAt": "2026-01-07T08:39:52.709Z",
+  "updatedAt": "2026-01-07T08:42:49.086Z",
+  "planSpec": {
+    "status": "approved",
+    "version": 1,
+    "reviewedByUser": true,
+    "generatedAt": "2026-01-06T21:39:42.576Z",
+    "tasks": [],
+    "tasksTotal": 0,
+    "tasksCompleted": 0,
+    "approvedAt": "2026-01-06T21:44:35.882Z"
+  }
+}

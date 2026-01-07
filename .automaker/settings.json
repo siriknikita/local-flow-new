@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "theme": "solarized",
+  "currentWorktree": {
+    "path": null,
+    "branch": "main"
+  },
+  "worktrees": [
+    {
+      "path": "/Users/mykytasiryk/personal-projects/local-flow-new",
+      "branch": "main",
+      "isMain": true,
+      "isCurrent": true,
+      "hasWorktree": true,
+      "hasChanges": true,
+      "changedFilesCount": 1
+    }
+  ]
+}

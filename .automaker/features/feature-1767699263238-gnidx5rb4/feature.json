@@ -1,0 +1,21 @@
+{
+  "category": "Uncategorized",
+  "description": "We're able to talk to the microphone, and get the information from the Whisper model from OpenAI with the transcription of text.",
+  "title": "",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": false,
+  "model": "cursor-auto",
+  "thinkingLevel": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "skip",
+  "requirePlanApproval": false,
+  "dependencies": [],
+  "titleGenerating": false,
+  "status": "verified",
+  "id": "feature-1767699263238-gnidx5rb4",
+  "startedAt": "2026-01-06T21:29:02.830Z",
+  "updatedAt": "2026-01-06T21:33:55.535Z"
+}

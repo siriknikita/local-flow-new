@@ -1,0 +1,19 @@
+{
+  "category": "Uncategorized",
+  "description": "I want to have a react as a frontend for the application ",
+  "title": "",
+  "images": [],
+  "imagePaths": [],
+  "textFilePaths": [],
+  "skipTests": false,
+  "model": "cursor-auto",
+  "thinkingLevel": "none",
+  "branchName": "main",
+  "priority": 2,
+  "planningMode": "lite",
+  "requirePlanApproval": true,
+  "dependencies": [],
+  "titleGenerating": false,
+  "status": "backlog",
+  "id": "feature-1767735382357-2cqr9p54g"
+}

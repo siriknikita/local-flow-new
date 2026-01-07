@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whisper Transcription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Whisper Transcription</h1>
+        <p class="subtitle">Record your voice and get instant transcription</p>
+        
+        <div class="recording-controls">
+            <button id="recordBtn" class="record-btn">
+                <span class="btn-icon">🎤</span>
+                <span class="btn-text">Start Recording</span>
+            </button>
+            <button id="stopBtn" class="stop-btn" disabled>
+                <span class="btn-icon">⏹️</span>
+                <span class="btn-text">Stop Recording</span>
+            </button>
+        </div>
+        
+        <div id="status" class="status"></div>
+        
+        <div id="transcription" class="transcription-container">
+            <h2>Transcription:</h2>
+            <div id="transcriptionText" class="transcription-text"></div>
+        </div>
+        
+        <div id="error" class="error"></div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
